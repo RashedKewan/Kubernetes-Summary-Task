@@ -68,7 +68,7 @@ Run BitCoin image from DockerHub
 
 ```bash
   docker pull kewanrashed/bitcoin_price
-  docker run -d -p 5000:5000 salehtaha/docker-final-task:1.1
+  docker run -d -p 5000:5000 kewanrashed/bitcoin_price
 ```
 <img width="919" alt="image" src="bitcoin-dockerhub.png">
 
@@ -77,7 +77,7 @@ Run Ynet image from DockerHub
 
 ```bash
   docker pull kewanrashed/ynetnews
-  docker run -d -p 5000:5000 salehtaha/ynet-news:latest
+  docker run -d -p 5000:5000 kewanrashed/ynetnews
 ```
 <img width="919" alt="image" src="ynet-dockerhub.png">
 
