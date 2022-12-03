@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bitcoin-deployment
+  labels:
+    app: bitcoin
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: bitcoin
+  template:
+    metadata:
+      labels:
+        app: bitcoin
+    spec:
+      containers:
+      - name: bitcoin
+        image: kewanrashed/bitcoin_price
+        ports:
+        - containerPort: 5000
+          name: bitcoin
+        env:
+            - name: SERVER_PORT
+              value: "5000"
+            - name: REDIS_HOST
+              value: "redis"
+            - name: REDIS_PORT
+              value: "6379"

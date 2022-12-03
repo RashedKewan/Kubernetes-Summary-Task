@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: bitcoin-service
+spec:
+  type: ClusterIP
+  selector:
+    app: bitcoin
+  ports:
+  - protocol: TCP
+    port: 5000
+    targetPort: 5000
+  
