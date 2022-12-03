@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ynet-deplyment
+  labels:
+    app: ynet
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: ynet
+  template:
+    metadata:
+      labels:
+        app: ynet
+    spec:
+      containers:
+      - name: ynet
+        image: kewanrashed/ynetnews
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 5000
+          name: ynet
